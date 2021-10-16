@@ -1,0 +1,60 @@
+﻿@page
+@model NutriApp.App.Presentacion.Page.Pacientes.Config.ConfigModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Editar " + Model.Paciente.Nombre; 
+}
+
+<nav class="panel">
+    <a class="btn-panel" asp-page="./index" asp-route-id="@Model.Paciente.Id" data-content="Perfil" >Perfil</a> 
+    <a class="btn-panel" asp-page="./Valoracion" asp-route-id="@Model.Paciente.Id" data-content="Registrar Valoración">Registrar Valoración</a> 
+    <a class="btn-panel" asp-page="./Histo" asp-route-id="@Model.Paciente.Id" data-content="Historial">Historial</a> 
+    <a class="btn-panel" asp-page="./Config" asp-route-id="@Model.Paciente.Id" data-content="Editar Perfil">Editar Perfil</a> 
+    <a class="btn-panel" asp-page="../Login/index" data-content="Cerrar Sesión">Cerrar Sesión</a>
+</nav>
+
+<div class="perfilPaciente">
+    <div class="infoPerfil">
+        <form method="post" asp-page-handler="edit">
+            <table>
+                <tr>
+                    <td><input type="hidden" asp-for="Paciente.Id" value="@Model.Paciente.Id" ></td>
+                </tr>
+                <tr>
+                    <td class="ident"><label for="Nombre">Nombre:</label></td>
+                    <td><input type="text" asp-for="Paciente.Nombre" value="@Model.Paciente.Nombre"></td>
+                </tr>
+                <tr>
+                    <td class="ident"><label for="FechaNacimiento">Fecha de Nacimiento:</label></td>
+                    <td> <input type="date" asp-for="Paciente.FechaNacimiento"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Telefono:</td>
+                    <td><input type="text" asp-for="Paciente.Telefono" value="@Model.Paciente.Telefono"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Correo:</td>
+                    <td><input type="text" asp-for="Paciente.Correo" value="@Model.Paciente.Correo"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Longitud:</td>
+                    <td><input type="text" asp-for="Paciente.Longitud" value="@Model.Paciente.Longitud"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Latitud:</td>
+                    <td><input type="text" asp-for="Paciente.Latitud" value="@Model.Paciente.Latitud"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Dirección:</td>
+                    <td><input type="text" asp-for="Paciente.Direccion" value="@Model.Paciente.Direccion"></td>
+                </tr>
+
+                <tr>
+                    <td class="ident">Contraseña:</td>
+                    <td><input type="password" asp-for="Paciente.Password" value="@Model.Paciente.Password"></td>
+                </tr>
+            </table>
+            <button type="submit">Modificar</button>
+        </form>
+    </div>
+</div>

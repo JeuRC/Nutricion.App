@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,600;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    background-color: #dff8b4;
+}
+
+footer{
+    background-color: #418f41;
+    color: #fff;
+    height: 7vh;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+}
+
+.header{
+    display: flex;
+    position: fixed;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #418f41;
+    max-width: 100vw;
+    width: 100%;
+    height: 7vh;
+    top: 0;
+    box-shadow: 2px 2px 3px #000;
+}
+
+.header .btn-menu{
+    width: 35px;
+    height: 50%;
+    cursor: pointer;
+    position: relative;
+    margin-left: 15px;
+}
+
+.header .btn-menu span{
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.549);
+}
+
+.header .btn-menu span:before{
+    content: '';
+    position: absolute;
+    top: -9px;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    transition: all .5s ease;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.549);
+}
+
+.header .btn-menu span:after{
+    content: '';
+    position: absolute;
+    top: 9px;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    transition: all .5s ease;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.549);
+}
+
+.header .btn-menu.active span{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+
+.header .btn-menu.active span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.header .btn-menu.active span::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.panel{
+    top: 7vh;
+    left: 0px;
+    height: calc(100vh - 14vh);
+    width: 300px;
+    position: absolute;
+    background-color: #418f41;
+    color: #fff;
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+    font-size: 1.2em;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content:start;
+    align-items: center;
+}
+
+.panel.active{
+    transform: translateX(0);
+}
+
+.panel .btn-panel{
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.panel .btn-panel:before{
+    position: absolute;
+    content: attr(data-content);
+    background-color: #dff8b4;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    height: 100%;
+    width: 0;
+    transition: all 350ms ease;
+}
+
+.panel .btn-panel:hover:before{
+    width: 100%;
+}
+
+.panel .btn-panel:hover{
+    color: #418f41;
+}
+
+.header .nutriapp-logo{
+    height: 40px;
+    margin-right: 15px;
+}
+
+main{
+    margin: 7vh auto;
+    width: 90%;
+}
+
+.perfilPaciente{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.perfilPaciente .img-perfil{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #418f41;
+    margin-left: 30px;
+}
+
+.perfilPaciente .infoPerfil{
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 1.5em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.perfilPaciente .infoPerfil #Nombre{
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+    color: #418f41;
+}
+
+.perfilPaciente .infoPerfil input{
+    background-color: rgba(65, 143, 65, 0.349);
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.perfilPaciente .infoPerfil input:focus{
+    color: rgb(114, 114, 114);
+}
+
+.perfilPaciente .infoPerfil .ident{
+    text-align: right;
+    padding-right: 17px;
+    color: #418f41;
+}

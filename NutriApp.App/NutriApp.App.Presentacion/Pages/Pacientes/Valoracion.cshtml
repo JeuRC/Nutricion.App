@@ -1,0 +1,45 @@
+﻿@page
+@model NutriApp.App.Presentacion.Page.Pacientes.Valoracion.ValoracionModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Valoración";
+}
+
+<nav class="panel">
+    <a class="btn-panel" asp-page="./index" asp-route-id="@Model.idPaciente" data-content="Perfil" >Perfil</a> 
+    <a class="btn-panel" asp-page="./Valoracion" asp-route-id="@Model.idPaciente" data-content="Registrar Valoración">Registrar Valoración</a> 
+    <a class="btn-panel" asp-page="./Histo" asp-route-id="@Model.idPaciente" data-content="Historial">Historial</a> 
+    <a class="btn-panel" asp-page="./Config" asp-route-id="@Model.idPaciente" data-content="Editar Perfil">Editar Perfil</a> 
+    <a class="btn-panel" asp-page="../Login/index" data-content="Cerrar Sesión">Cerrar Sesión</a>
+</nav>
+
+<div class="perfilPaciente">
+    <div class="infoPerfil">
+        <form method="post">
+            <table>
+                <tr>
+                    <td class="ident">Carbohidratos:</td>
+                    <td><input type="text" asp-for="Historial.Carbohidratos"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Proteinas:</td>
+                    <td> <input type="text" asp-for="Historial.Proteinas"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Grasas:</td>
+                    <td><input type="text" asp-for="Historial.Grasas"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Peso:</td>
+                    <td><input type="text" asp-for="Historial.Peso"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Estatura:</td>
+                    <td><input type="text" asp-for="Historial.Estatura"></td>
+                </tr>
+                <input type="hidden" asp-for="Historial.PacienteId" value="@Model.idPaciente">
+            </table>
+            <button type="submit">Agregar Valoración</button>
+        </form>
+    </div>
+</div>

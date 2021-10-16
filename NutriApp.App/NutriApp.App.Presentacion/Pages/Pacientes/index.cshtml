@@ -1,0 +1,49 @@
+﻿@page
+@model NutriApp.App.Presentacion.Page.Pacientes.indexModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = Model.Paciente.Nombre; 
+}
+
+<nav class="panel">
+    <a class="btn-panel" asp-page="./index" asp-route-id="@Model.Paciente.Id" data-content="Perfil" >Perfil</a> 
+    <a class="btn-panel" asp-page="./Valoracion" asp-route-id="@Model.Paciente.Id" data-content="Registrar Valoración">Registrar Valoración</a> 
+    <a class="btn-panel" asp-page="./Histo" asp-route-id="@Model.Paciente.Id" data-content="Historial">Historial</a> 
+    <a class="btn-panel" asp-page="./Config" asp-route-id="@Model.Paciente.Id" data-content="Editar Perfil">Editar Perfil</a> 
+    <a class="btn-panel" asp-page="../Login/index" data-content="Cerrar Sesión">Cerrar Sesión</a>
+</nav>
+
+<div class="perfilPaciente">
+    <img src="~/assets/profile.png" class="img-perfil" alt="pefil">
+    <div class="infoPerfil">
+        <p id="Nombre">@Model.Paciente.Nombre</p>
+        <table>
+            <tr>
+                <td class="ident">Fecha de Nacimiento:</td>
+                <td>@Model.Paciente.FechaNacimiento.ToString("d")</td>
+            </tr>
+            <tr>
+                <td class="ident">Telefono:</td>
+                <td>@Model.Paciente.Telefono</td>
+            </tr>
+            <tr>
+                <td class="ident">Correo:</td>
+                <td>@Model.Paciente.Correo</td>
+            </tr>
+            <tr>
+                <td class="ident">Ubicación:</td>
+                <td>@Model.Paciente.Longitud, @Model.Paciente.Latitud </td>
+            </tr>
+        
+        @if (Model.Paciente.Direccion != null)
+        {
+            <tr>
+                <td class="ident">Dirección:</td>
+                <td>@Model.Paciente.Direccion</td>
+            </tr>
+        }
+        </table>
+    </div>
+</div>
+
+

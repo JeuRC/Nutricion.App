@@ -1,0 +1,159 @@
+﻿a{
+  text-decoration: none;
+}
+
+.sessionLayout{
+  display: flex;
+  background-image: url("../assets/background.jpg");
+  background-position: top left;
+  background-size: 40%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sessionLayout .content{
+  width: fit-content;
+  padding: 20px;
+  background-color: #418f41;
+  max-width: 500px;
+  height: fit-content;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px #000;
+}
+
+.sessionLayout .content p{
+  color: #ffffff;
+  margin: 15px auto;
+  max-width: 500px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.btn-rdn{
+  background-color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #418f41;
+  padding: 5px 30px;
+  border-radius: 20px;
+}
+
+.btn-rdn:hover{
+  padding: 7px 32px;
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 4px #000;
+}
+
+.formLogin{
+  margin-left: -20px;
+  margin-bottom: -20px;
+  padding: 10px;
+  color: #418f41;
+  font-size: 1.1rem;
+  width: calc(100% + 20px);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 0 15px 15px;
+}
+
+.formLogin .formContent{
+  text-align: left;
+  width: 80%;
+  margin: auto;
+}
+
+.formLogin .signup{
+  display: block;
+  height: 25px;
+  width: 90%;
+  margin-bottom: 10px;
+  border: 1px solid #418f41;
+  border-radius: 10px;
+  background-color: rgba(65, 143, 65, 0.603);
+  outline: none;
+  padding-left: 20px;
+}
+
+.formLogin button{
+  cursor: pointer;
+  border: none;
+  background-color: #418f41;
+  color: #fff;
+}
+
+.userType{
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 20px;
+}
+
+.userType.no-visible{
+  display: none;
+}
+
+.userType label{
+  display: flex;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 4px #418f41;
+  cursor: pointer;
+}
+
+.userType input[type="radio"]{
+  display: none;
+  
+}
+
+.userType input[type="radio"]:checked + label{
+  border: 3px solid #418f41;
+}
+
+.userType img{
+  width: 50px;
+}
+
+.noLog{
+  color: rgb(180, 0, 0);
+  font-size: 0.8rem;
+}
+
+.formLogin .pacienteSign{
+  display: none;
+}
+.formLogin .nutricionistaSign{
+  display: none;
+}
+.formLogin .coachSign{
+  display: none;
+}
+
+.formLogin .pacienteSign.visible{
+  display: initial;
+  
+}
+.formLogin .nutricionistaSign.visible{
+  display: initial;
+}
+.formLogin .coachSign.visible{
+  display: initial;
+}
+
+.formLogin .close{
+  color: #418f41;
+  font-size: 1em;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px #000;
+  border: 1px solid #418f41;
+  border-radius: 50%;
+  cursor: pointer;
+}
