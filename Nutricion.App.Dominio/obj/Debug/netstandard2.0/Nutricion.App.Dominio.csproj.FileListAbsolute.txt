@@ -1,0 +1,9 @@
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\bin\Debug\netstandard2.0\Nutricion.App.Dominio.deps.json
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\bin\Debug\netstandard2.0\Nutricion.App.Dominio.dll
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\bin\Debug\netstandard2.0\Nutricion.App.Dominio.pdb
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\obj\Debug\netstandard2.0\Nutricion.App.Dominio.csprojAssemblyReference.cache
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\obj\Debug\netstandard2.0\Nutricion.App.Dominio.AssemblyInfoInputs.cache
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\obj\Debug\netstandard2.0\Nutricion.App.Dominio.AssemblyInfo.cs
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\obj\Debug\netstandard2.0\Nutricion.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\obj\Debug\netstandard2.0\Nutricion.App.Dominio.dll
+C:\Nutricion\Nutricion.App\Nutricion.App.Dominio\obj\Debug\netstandard2.0\Nutricion.App.Dominio.pdb

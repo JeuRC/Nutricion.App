@@ -1,0 +1,12 @@
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\obj\Debug\netstandard2.1\Nutricion.App.Persistencia.csprojAssemblyReference.cache
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\obj\Debug\netstandard2.1\Nutricion.App.Persistencia.AssemblyInfoInputs.cache
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\obj\Debug\netstandard2.1\Nutricion.App.Persistencia.AssemblyInfo.cs
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\obj\Debug\netstandard2.1\Nutricion.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\bin\Debug\netstandard2.1\Nutricion.App.Persistencia.deps.json
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\bin\Debug\netstandard2.1\Nutricion.App.Persistencia.dll
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\bin\Debug\netstandard2.1\Nutricion.App.Persistencia.pdb
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\bin\Debug\netstandard2.1\Nutricion.App.Dominio.dll
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\bin\Debug\netstandard2.1\Nutricion.App.Dominio.pdb
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\obj\Debug\netstandard2.1\Nutricion.App.Persistencia.csproj.CopyComplete
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\obj\Debug\netstandard2.1\Nutricion.App.Persistencia.dll
+C:\Nutricion\Nutricion.App\Nutricion.App.Persistencia\obj\Debug\netstandard2.1\Nutricion.App.Persistencia.pdb
