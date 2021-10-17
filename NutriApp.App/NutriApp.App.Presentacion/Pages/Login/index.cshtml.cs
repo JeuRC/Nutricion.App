@@ -36,10 +36,10 @@ namespace NutriApp.App.Presentacion.Pages.Login{
                 return RedirectToPage("../Pacientes/index", new { id = Paciente.Id});
             }
             else if(Nutricionista != null){
-                return RedirectToPage("Nutricionista/index", new { id = Nutricionista.Id});
+                return RedirectToPage("../Nutricionistas/index", new { id = Nutricionista.Id});
             }
             else if(Coach != null){
-                return RedirectToPage("Coach/index", new { id = Coach.Id});
+                return RedirectToPage("../Coaches/index", new { id = Coach.Id});
             }
             else{
                  mensaje = "Datos incorrectos! ingresa un correo o contraseña correcta, o crea una cuenta";

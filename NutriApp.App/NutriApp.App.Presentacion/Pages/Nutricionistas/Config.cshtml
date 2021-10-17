@@ -1,0 +1,55 @@
+﻿@page
+@model NutriApp.App.Presentacion.Page.Nutricionistas.Config.ConfigModel
+@{
+    Layout = "_Layout";
+}
+
+<nav class="panel">
+    <a class="btn-panel" asp-page="./index" asp-route-id="@Model.Nutricionista.Id" data-content="Perfil" >Perfil</a> 
+    <a class="btn-panel" asp-page="./Pacientes" asp-route-id="@Model.Nutricionista.Id" data-content="Pacientes">Pacientes</a> 
+    <a class="btn-panel" asp-page="./Config" asp-route-id="@Model.Nutricionista.Id" data-content="Editar Perfil">Editar Perfil</a> 
+    <a class="btn-panel" asp-page="../Login/index" data-content="Cerrar Sesión">Cerrar Sesión</a>
+</nav>
+
+
+<div class="perfilPaciente">
+    <div class="infoPerfil">
+        <form method="post" asp-page-handler="edit">
+            <table>
+                <tr>
+                    <td><input type="hidden" asp-for="Nutricionista.Id" value="@Model.Nutricionista.Id" ></td>
+                </tr>
+                <tr>
+                    <td class="ident"><label for="Nombre">Nombre:</label></td>
+                    <td><input type="text" asp-for="Nutricionista.Nombre" value="@Model.Nutricionista.Nombre"></td>
+                </tr>
+                <tr>
+                    <td class="ident"><label for="FechaNacimiento">Fecha de Nacimiento:</label></td>
+                    <td> <input type="date" asp-for="Nutricionista.FechaNacimiento"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Telefono:</td>
+                    <td><input type="text" asp-for="Nutricionista.Telefono" value="@Model.Nutricionista.Telefono"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Correo:</td>
+                    <td><input type="text" asp-for="Nutricionista.Correo" value="@Model.Nutricionista.Correo"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Especialización:</td>
+                    <td><input type="text" asp-for="Nutricionista.Especializacion" value="@Model.Nutricionista.Especializacion"></td>
+                </tr>
+                <tr>
+                    <td class="ident">TarjetaProfesional:</td>
+                    <td><input type="text" asp-for="Nutricionista.TarjetaProfesional" value="@Model.Nutricionista.TarjetaProfesional"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Contraseña:</td>
+                    <td><input type="password" asp-for="Nutricionista.Password" value="@Model.Nutricionista.Password"></td>
+                </tr>
+            </table>
+            <button type="submit">Modificar</button>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,55 @@
+﻿@page
+@model NutriApp.App.Presentacion.Page.Coaches.Config.ConfigModel
+@{
+    Layout = "_Layout";
+}
+
+<nav class="panel">
+    <a class="btn-panel" asp-page="./index" asp-route-id="@Model.Coach.Id" data-content="Perfil" >Perfil</a> 
+    <a class="btn-panel" asp-page="./Pacientes" asp-route-id="@Model.Coach.Id" data-content="Pacientes">Pacientes</a> 
+    <a class="btn-panel" asp-page="./Config" asp-route-id="@Model.Coach.Id" data-content="Editar Perfil">Editar Perfil</a> 
+    <a class="btn-panel" asp-page="../Login/index" data-content="Cerrar Sesión">Cerrar Sesión</a>
+</nav>
+
+
+<div class="perfilPaciente">
+    <div class="infoPerfil">
+        <form method="post" asp-page-handler="edit">
+            <table>
+                <tr>
+                    <td><input type="hidden" asp-for="Coach.Id" value="@Model.Coach.Id" ></td>
+                </tr>
+                <tr>
+                    <td class="ident"><label for="Nombre">Nombre:</label></td>
+                    <td><input type="text" asp-for="Coach.Nombre" value="@Model.Coach.Nombre"></td>
+                </tr>
+                <tr>
+                    <td class="ident"><label for="FechaNacimiento">Fecha de Nacimiento:</label></td>
+                    <td> <input type="date" asp-for="Coach.FechaNacimiento"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Telefono:</td>
+                    <td><input type="text" asp-for="Coach.Telefono" value="@Model.Coach.Telefono"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Correo:</td>
+                    <td><input type="text" asp-for="Coach.Correo" value="@Model.Coach.Correo"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Especialización:</td>
+                    <td><input type="text" asp-for="Coach.Especializacion" value="@Model.Coach.Especializacion"></td>
+                </tr>
+                <tr>
+                    <td class="ident">TarjetaProfesional:</td>
+                    <td><input type="text" asp-for="Coach.TarjetaProfesional" value="@Model.Coach.TarjetaProfesional"></td>
+                </tr>
+                <tr>
+                    <td class="ident">Contraseña:</td>
+                    <td><input type="password" asp-for="Coach.Password" value="@Model.Coach.Password"></td>
+                </tr>
+            </table>
+            <button type="submit">Modificar</button>
+        </form>
+    </div>
+</div>
+

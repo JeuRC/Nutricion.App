@@ -47,7 +47,7 @@ namespace NutriApp.App.Presentacion.Pages.SignUp
                 Nutricionista.Correo = emailUser;
                 Nutricionista.Password = passwordUser;
                 var NutricionistaAdd = _repoNutricionista.AddNutricionista(Nutricionista);
-                return RedirectToPage("Nutricionista/index", new { id = NutricionistaAdd.Id});
+                return RedirectToPage("../Nutricionistas/index", new { id = NutricionistaAdd.Id});
             }
             else if(userType == "coach"){
                 Coach.Nombre = nameUser;
@@ -56,7 +56,7 @@ namespace NutriApp.App.Presentacion.Pages.SignUp
                 Coach.Correo = emailUser;
                 Coach.Password = passwordUser;
                 var CoachAdd = _repoCoach.AddCoach(Coach);
-                return RedirectToPage("Coach/index", new { id = CoachAdd.Id});
+                return RedirectToPage("../Coaches/index", new { id = CoachAdd.Id});
             }else{
                 return Page();
             }
