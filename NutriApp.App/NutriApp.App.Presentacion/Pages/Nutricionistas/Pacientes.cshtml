@@ -1,4 +1,44 @@
 ﻿@page
 @model NutriApp.App.Presentacion.Page.Nutricionistas.Pacientes.PacientesModel
 @{
+    Layout="_Layout";
 }
+
+<nav class="panel">
+    <a class="btn-panel" asp-page="./index" asp-route-id="@Model.Nutricionista.Id" data-content="Perfil" >Perfil</a> 
+    <a class="btn-panel" asp-page="./Pacientes" asp-route-id="@Model.Nutricionista.Id" data-content="Nutricionistas">Nutricionistas</a> 
+    <a class="btn-panel" asp-page="./Config" asp-route-id="@Model.Nutricionista.Id" data-content="Editar Perfil">Editar Perfil</a> 
+    <a class="btn-panel" asp-page="../Login/index" data-content="Cerrar Sesión">Cerrar Sesión</a>
+</nav>
+
+<div class="perfilPaciente">
+    <div class="infoPerfil">
+        
+        <table class="table">
+            <thead>
+                <td>
+                    <th>Paciente</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                    <th>Carbohidratos</th>
+                    <th>Proteinas</th>
+                    <th>Grasas</th>
+                    <th>Peso</th>
+                    <th>Estatura</th>
+                </td>
+            </thead>
+            <tbody>
+                <td>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </td>
+            </tbody>
+        </table>
+    </div>
+</div>
