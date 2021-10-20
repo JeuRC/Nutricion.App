@@ -14,7 +14,7 @@ namespace NutriApp.App.Persistencia{
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if(!optionsBuilder.IsConfigured){
                 optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = NutriAppData");
+                .UseSqlServer("Server=tcp:databasenutri-app.database.windows.net,1433;Initial Catalog=NutriApp;Persist Security Info=False;User ID=FullDev;Password=nutriapp1234*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
     }
