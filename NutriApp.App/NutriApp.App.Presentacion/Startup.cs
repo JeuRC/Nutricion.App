@@ -29,6 +29,7 @@ namespace NutriApp.App.Presentacion
             services.AddSingleton<IRepositoryNutricionista, RepositoryNutricionista>();
             services.AddSingleton<IRepositoryCoach, RepositoryCoach>();
             services.AddSingleton<IRepositoryHistorial, RepositoryHistorial>();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +50,8 @@ namespace NutriApp.App.Presentacion
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
